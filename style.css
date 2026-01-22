@@ -1,0 +1,290 @@
+/* ============================================
+   THE DRILLING LAB — Stylesheet
+   Typography-first, dark theme, minimal design
+   ============================================ */
+
+/* ----- Reset & Base ----- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  background-color: #1f1f1f;
+  color: #f3f1e7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----- Layout ----- */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+  border-bottom: 1px solid rgba(243, 241, 231, 0.1);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+/* ----- Header ----- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1f1f1f;
+  border-bottom: 1px solid rgba(243, 241, 231, 0.1);
+  padding: 20px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(243, 241, 231, 0.5);
+  border: 1px dashed rgba(243, 241, 231, 0.3);
+  padding: 8px 16px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #f3f1e7;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* ----- Typography ----- */
+h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+p {
+  max-width: 640px;
+}
+
+.kicker {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: rgba(243, 241, 231, 0.6);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: rgba(243, 241, 231, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(243, 241, 231, 0.1);
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(243, 241, 231, 0.85);
+  margin-bottom: 40px;
+}
+
+/* ----- Buttons ----- */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 14px 24px;
+  border: 1px solid rgba(243, 241, 231, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #f3f1e7;
+  color: #1f1f1f;
+  border-color: #f3f1e7;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: #f3f1e7;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #f3f1e7;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(243, 241, 231, 0.1);
+}
+
+/* ----- Hero ----- */
+.hero {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* ----- What We Do Grid ----- */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(243, 241, 231, 0.75);
+}
+
+/* ----- Founder ----- */
+.founder-content {
+  max-width: 640px;
+}
+
+.founder-content p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(243, 241, 231, 0.85);
+  margin-bottom: 24px;
+}
+
+.founder-content p:last-child {
+  margin-bottom: 0;
+}
+
+.founder-content strong {
+  font-weight: 500;
+  color: #f3f1e7;
+}
+
+/* ----- Contact ----- */
+.contact-intro {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(243, 241, 231, 0.85);
+}
+
+.fineprint {
+  margin-top: 48px;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(243, 241, 231, 0.5);
+}
+
+/* ----- Footer ----- */
+.site-footer {
+  padding: 40px 0;
+  border-top: 1px solid rgba(243, 241, 231, 0.1);
+}
+
+.site-footer p {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(243, 241, 231, 0.5);
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 860px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .card {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(243, 241, 231, 0.08);
+  }
+
+  .card:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .section-label {
+    margin-bottom: 32px;
+  }
+
+  .cta-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
