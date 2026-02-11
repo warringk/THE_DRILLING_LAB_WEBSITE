@@ -190,6 +190,14 @@ p {
   padding-bottom: 120px;
 }
 
+.hero-title {
+  font-family: 'Hemi Head', 'Impact', 'Arial Black', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: clamp(42px, 7vw, 72px);
+  letter-spacing: 0.02em;
+}
+
 /* ----- What We Do Grid ----- */
 .grid-3 {
   display: grid;
