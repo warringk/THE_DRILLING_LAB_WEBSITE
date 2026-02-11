@@ -3,6 +3,15 @@
    Typography-first, dark theme, minimal design
    ============================================ */
 
+/* ----- Hemi Head Font for Logo ----- */
+@font-face {
+  font-family: 'Hemi Head';
+  src: url('hemi-head-bold-italic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ----- Reset & Base ----- */
 *, *::before, *::after {
   margin: 0;
@@ -65,6 +74,15 @@ body {
   color: rgba(243, 241, 231, 0.5);
   border: 1px dashed rgba(243, 241, 231, 0.3);
   padding: 8px 16px;
+}
+
+.logo-text {
+  font-family: 'Hemi Head', 'Impact', 'Arial Black', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  color: #f3f1e7;
 }
 
 .nav-link {
