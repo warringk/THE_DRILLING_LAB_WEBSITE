@@ -115,6 +115,7 @@ h3 {
 
 p {
   max-width: 640px;
+  text-align: justify;
 }
 
 .kicker {
