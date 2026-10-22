@@ -85,6 +85,11 @@ body {
   color: #f3f1e7;
 }
 
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
 .nav-link {
   font-size: 14px;
   font-weight: 400;
@@ -115,7 +120,8 @@ h3 {
 
 p {
   max-width: 640px;
-  text-align: justify;
+  text-align: left;
+  overflow-wrap: break-word;
 }
 
 .kicker {
@@ -144,7 +150,7 @@ p {
   line-height: 1.8;
   color: rgba(243, 241, 231, 0.85);
   margin-bottom: 40px;
-  text-align: justify;
+  text-align: left;
 }
 
 /* ----- Buttons ----- */
@@ -200,6 +206,91 @@ p {
   letter-spacing: 0.02em;
 }
 
+.hero-headline {
+  font-size: clamp(28px, 4.2vw, 44px);
+  font-weight: 500;
+  line-height: 1.25;
+  max-width: 860px;
+  color: #f3f1e7;
+}
+
+/* ----- Chips (roadmap / in demo) ----- */
+.chip {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fbbf24;
+  background-color: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.chip-roadmap {
+  color: #4a9eff;
+  background-color: rgba(74, 158, 255, 0.1);
+  border-color: rgba(74, 158, 255, 0.5);
+}
+
+/* ----- Roadmap ----- */
+.roadmap-box {
+  max-width: 640px;
+  border: 1px dashed rgba(74, 158, 255, 0.45);
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  padding: 24px;
+}
+
+.roadmap-box p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(243, 241, 231, 0.85);
+}
+
+/* ----- How it works ----- */
+.steps {
+  list-style: none;
+  max-width: 720px;
+  display: grid;
+  gap: 28px;
+}
+
+.steps li {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.step-n {
+  flex: 0 0 auto;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4a9eff;
+  border: 1px solid rgba(74, 158, 255, 0.5);
+  border-radius: 4px;
+  padding: 0 8px;
+}
+
+.steps p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(243, 241, 231, 0.85);
+}
+
+.tagline {
+  font-weight: 500 !important;
+  color: #f3f1e7 !important;
+}
+
 /* ----- What We Do Grid ----- */
 .grid-3 {
   display: grid;
@@ -212,7 +303,7 @@ p {
   font-weight: 300;
   line-height: 1.8;
   color: rgba(243, 241, 231, 0.75);
-  text-align: justify;
+  text-align: left;
 }
 
 /* ----- Founder ----- */
@@ -226,7 +317,7 @@ p {
   line-height: 1.9;
   color: rgba(243, 241, 231, 0.85);
   margin-bottom: 24px;
-  text-align: justify;
+  text-align: left;
 }
 
 .founder-content p:last-child {
@@ -243,7 +334,7 @@ p {
   font-size: 16px;
   font-weight: 300;
   color: rgba(243, 241, 231, 0.85);
-  text-align: justify;
+  text-align: left;
 }
 
 .fineprint {
@@ -295,6 +386,10 @@ p {
     font-size: 28px;
   }
 
+  .hero-headline {
+    font-size: 26px;
+  }
+
   .section-label {
     margin-bottom: 32px;
   }
@@ -317,5 +412,16 @@ p {
     flex-direction: column;
     gap: 16px;
     text-align: center;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+  }
+
+  .roadmap-box {
+    padding: 16px;
   }
 }
