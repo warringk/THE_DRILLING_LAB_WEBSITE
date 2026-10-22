@@ -139,6 +139,7 @@ p {
   letter-spacing: 0.15em;
   color: rgba(243, 241, 231, 0.7);
   text-transform: uppercase;
+  max-width: none;
   margin-bottom: 48px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(243, 241, 231, 0.1);
