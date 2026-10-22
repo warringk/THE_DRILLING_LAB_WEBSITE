@@ -125,19 +125,19 @@ p {
 }
 
 .kicker {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.15em;
-  color: rgba(243, 241, 231, 0.6);
+  color: rgba(243, 241, 231, 0.7);
   margin-bottom: 16px;
   text-transform: uppercase;
 }
 
 .section-label {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.15em;
-  color: rgba(243, 241, 231, 0.6);
+  color: rgba(243, 241, 231, 0.7);
   text-transform: uppercase;
   margin-bottom: 48px;
   padding-bottom: 16px;
@@ -219,7 +219,7 @@ p {
   display: inline-block;
   vertical-align: middle;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.08em;
@@ -241,7 +241,7 @@ p {
 
 /* ----- Roadmap ----- */
 .roadmap-box {
-  max-width: 640px;
+  max-width: none;
   border: 1px dashed rgba(74, 158, 255, 0.45);
   border-radius: 4px;
   background-color: #2a2a2a;
@@ -249,6 +249,7 @@ p {
 }
 
 .roadmap-box p {
+  max-width: 760px;
   font-size: 15px;
   font-weight: 300;
   line-height: 1.9;
@@ -258,25 +259,31 @@ p {
 /* ----- How it works ----- */
 .steps {
   list-style: none;
-  max-width: 720px;
   display: grid;
-  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
 }
 
 .steps li {
   display: flex;
-  gap: 20px;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
 }
 
 .step-n {
   flex: 0 0 auto;
-  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 1;
   color: #4a9eff;
   border: 1px solid rgba(74, 158, 255, 0.5);
   border-radius: 4px;
-  padding: 0 8px;
 }
 
 .steps p {
@@ -299,7 +306,7 @@ p {
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   line-height: 1.8;
   color: rgba(243, 241, 231, 0.75);
@@ -308,7 +315,18 @@ p {
 
 /* ----- Founder ----- */
 .founder-content {
-  max-width: 640px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.founder-content p {
+  max-width: none;
+}
+
+.data .founder-content p {
+  grid-column: span 2;
 }
 
 .founder-content p {
@@ -316,12 +334,8 @@ p {
   font-weight: 300;
   line-height: 1.9;
   color: rgba(243, 241, 231, 0.85);
-  margin-bottom: 24px;
-  text-align: left;
-}
-
-.founder-content p:last-child {
   margin-bottom: 0;
+  text-align: left;
 }
 
 .founder-content strong {
@@ -341,7 +355,7 @@ p {
   margin-top: 48px;
   font-size: 13px;
   font-weight: 300;
-  color: rgba(243, 241, 231, 0.5);
+  color: rgba(243, 241, 231, 0.7);
 }
 
 /* ----- Footer ----- */
@@ -353,7 +367,7 @@ p {
 .site-footer p {
   font-size: 13px;
   font-weight: 300;
-  color: rgba(243, 241, 231, 0.5);
+  color: rgba(243, 241, 231, 0.7);
 }
 
 /* ----- Responsive ----- */
@@ -367,9 +381,29 @@ p {
     padding-bottom: 80px;
   }
 
-  .grid-3 {
+  .grid-3,
+  .steps,
+  .founder-content {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .steps {
+    gap: 28px;
+  }
+
+  .steps li {
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .data .founder-content p {
+    grid-column: auto;
+  }
+
+  .founder-content {
+    gap: 24px;
   }
 
   .card {
@@ -418,7 +452,15 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px 20px;
+    gap: 0 20px;
+    margin-top: 8px;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 8px;
   }
 
   .roadmap-box {
